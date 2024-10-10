@@ -5,25 +5,29 @@ export const siteConfig = {
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
-      label: "Home",
+      label: "DXVIL",
       href: "/",
     },
     {
-      label: "Docs",
-      href: "/docs",
+      label: "MUSIC",
+      href: "/music",
     },
     {
-      label: "Pricing",
-      href: "/pricing",
+      label: "SHOWS",
+      href: "/shows",
     },
     {
-      label: "Blog",
-      href: "/blog",
+      label: "CONTACT",
+      href: "/contact",
     },
     {
-      label: "About",
+      label: "ABOUT",
       href: "/about",
     },
+    // {
+    //   label: "SHOP",
+    //   href: "/shop",
+    // },
   ],
   links: {
     spotify: "https://open.spotify.com/artist/1Ngynwc6bFIKGzRcOrBAnx",

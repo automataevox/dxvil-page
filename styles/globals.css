@@ -2,7 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "Wide";
+    src: url('/wide.woff2');
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('/Montserrat-Regular.ttf');
+}
+
+body {
+    font-family: Montserrat;
+}
+
 .noise {
     background-image: url('/bg.webp');
     background-repeat: repeat;
+}
+
+header {
+    font-family: "Wide";
 }

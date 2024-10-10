@@ -19,7 +19,7 @@ export default function DefaultLayout({
       <Head />
       <div className="noise w-screen h-screen absolute opacity-20 grayscale" />
       <Navbar />
-      <main >
+      <main>
         {children}
       </main>
       <footer className="w-full flex items-center justify-center py-3 absolute bottom-0 gap-3">
