@@ -25,7 +25,8 @@ import {
   SearchIcon,
   Logo,
 } from "@/components/icons";
-import { FaSpotify } from "react-icons/fa";
+import { FaDiscord, FaInstagram, FaSpotify, FaTwitch, FaYoutube } from "react-icons/fa";
+import { SiApplemusic } from "react-icons/si";
 
 export const Navbar = () => {
   const searchInput = (
@@ -75,14 +76,23 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal href={siteConfig.links.twitter} title="Twitter">
+          <Link isExternal href={siteConfig.links.spotify} title="Twitter">
             <FaSpotify size={20} className="text-default-500"/>
           </Link>
-          <Link isExternal href={siteConfig.links.discord} title="Discord">
-            <DiscordIcon className="text-default-500" />
+          <Link isExternal href={siteConfig.links.twitch} title="Discord">
+            <FaTwitch size={20} className="text-default-500" />
           </Link>
-          <Link isExternal href={siteConfig.links.github} title="GitHub">
-            <GithubIcon className="text-default-500" />
+          <Link isExternal href={siteConfig.links.youtube} title="Discord">
+            <FaYoutube size={20} className="text-default-500" />
+          </Link>
+          <Link isExternal href={siteConfig.links.instagram} title="GitHub">
+            <FaInstagram size={20} className="text-default-500" />
+          </Link>
+          <Link isExternal href={siteConfig.links.appleMusic} title="Discord">
+            <SiApplemusic size={20} className="text-default-500" />
+          </Link>
+          <Link isExternal href={siteConfig.links.discord} title="Discord">
+            <FaDiscord size={20} className="text-default-500" />
           </Link>
         </NavbarItem>
       </NavbarContent>

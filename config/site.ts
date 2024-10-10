@@ -26,10 +26,11 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui-docs-v2.vercel.app",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    spotify: "https://open.spotify.com/artist/1Ngynwc6bFIKGzRcOrBAnx",
+    twitch: "https://twitch.tv/dxvilmusic",
+    youtube: "https://youtube.com/@dxvilmusic",
+    discord: "https://discord.gg/JJsjGEQydm",
+    instagram: "https://instagram.com/dxvilmusic",
+    appleMusic: "https://music.apple.com/us/artist/dxvil/1581545014",
   },
 };
