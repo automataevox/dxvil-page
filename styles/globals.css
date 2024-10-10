@@ -12,8 +12,12 @@
     src: url('/Montserrat-Regular.ttf');
 }
 
-body {
-    font-family: Montserrat;
+.w-font {
+    font-family: "Wide";
+}
+
+.m-font {
+    font-family: "Montserrat";
 }
 
 .noise {

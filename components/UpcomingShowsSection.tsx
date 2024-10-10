@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getArtistTracks } from "@/lib/api";
 import NewReleaseCard from "./NewReleaseCard";
 
-export default function NewReleasesSection() {
+export default function UpcomingShowsSection() {
   const [tracks, setTracks] = useState<any[]>([]);
 
   useEffect(() => {
@@ -20,10 +20,10 @@ export default function NewReleasesSection() {
   return (
     <div className="flex flex-col gap-3">
       <header>
-        <h2 className="text-2xl">NEW RELEASES</h2>
+        <h2 className="text-2xl">UPCOMING SHOWS</h2>
       </header>
-      <main>
-        <NewReleaseCard newReleaseData={tracks} upcomingId="Thoughts Of You"  />
+      <main className="h-[8rem] grid place-items-center">
+        <h2 className="m-font">No upcoming shows available</h2>
       </main>
     </div>
   );

@@ -16,7 +16,7 @@ import { SiApplemusic } from "react-icons/si";
 
 export const Navbar = () => {
   return (
-    <NextUINavbar maxWidth="2xl" position="sticky">
+    <NextUINavbar maxWidth="full" position="sticky">
       <NavbarContent>
         <div className="hidden lg:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
