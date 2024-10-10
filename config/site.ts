@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Coming Soon!",
-  description: "Make beautiful websites regardless of your design experience.",
+  description: "Meet DXVIL - Cyberpunk, DnB music produced based in Czech Repulic. New rising artist in electronic dance music scene!",
   navItems: [
     {
       label: "Home",
