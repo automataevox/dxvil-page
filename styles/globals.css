@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.noise {
+    background-image: url('@/public/bg.webp');
+    background-repeat: repeat;
+}
