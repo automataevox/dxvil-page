@@ -15,11 +15,11 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative flex flex-col h-screen">
+    <div className="relative flex flex-col h-screen mix-blend-screen">
       <Head />
       <div className="noise w-screen h-screen absolute opacity-20 grayscale" />
-      {/* <Navbar /> */}
-      <main className="mix-blend-screen">
+      <Navbar />
+      <main >
         {children}
       </main>
       <footer className="w-full flex items-center justify-center py-3 absolute bottom-0 gap-3">
