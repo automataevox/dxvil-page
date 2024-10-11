@@ -3,7 +3,7 @@ import { FaTwitch } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { SiApplemusic } from "react-icons/si";
-
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Head } from "./head";
 
 import { Navbar } from "@/components/navbar";
@@ -16,6 +16,7 @@ export default function DefaultLayout({
 }) {
   return (
     <div className="relative flex flex-col h-screen">
+      <GoogleAnalytics gaId="G-0ZZ1FFKEJQ" />
       <Head />
       <div className="noise w-screen h-screen absolute opacity-20 grayscale" />
       {/* <Navbar /> */}
