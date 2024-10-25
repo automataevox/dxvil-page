@@ -2,10 +2,12 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "DXVIL",
-  description: "Meet DXVIL - Cyberpunk, DnB music produced based in Czech Repulic. New rising artist in electronic dance music scene!",
+  description: "Meet DXVIL - Techno & DnB music producer based in Czech Repulic. New rising artist in electronic dance music scene!",
+  artistEmail: "artist@dxvil.com",
+  bookingEmail: "booking@dxvil.com",
   navItems: [
     {
-      label: "DXVIL",
+      label: "HOME",
       href: "/",
     },
     {
@@ -16,6 +18,10 @@ export const siteConfig = {
       label: "SHOWS",
       href: "/shows",
     },
+    // {
+    //   label: "PRODUCTS",
+    //   href: "/products",
+    // },
     {
       label: "CONTACT",
       href: "/contact",
@@ -25,8 +31,8 @@ export const siteConfig = {
       href: "/about",
     },
     // {
-    //   label: "SHOP",
-    //   href: "/shop",
+    //   label: "MERCH",
+    //   href: "/merch",
     // },
   ],
   links: {

@@ -1,10 +1,9 @@
 import axios from 'axios';
 
-// Your Spotify API credentials
 const CLIENT_ID = '0e97316ba8d84994a6b0e52a8ad596e9';
 const CLIENT_SECRET = '662736c58591490e8c33b5b5f9adb80c';
+const GUMROAD_SECRET = 'SzMi_UZe5nECIhjWQnm9DD2lgOJMpKy5CvJgAB-wXek'
 
-// Function to get access token using Client Credentials Flow
 const getAccessToken = async () => {
     try {
         const response = await axios.post('https://accounts.spotify.com/api/token',
@@ -20,16 +19,14 @@ const getAccessToken = async () => {
         return response.data.access_token;
     } catch (error) {
         console.error('Error fetching access token:', error);
-        return null;  // Return null or handle the error appropriately
+        return null;
     }
 };
 
-// Fetch artist's tracks using Spotify API
 export const getArtistTracks = async (artistId: string) => {
     try {
         const accessToken = await getAccessToken();
 
-        // If accessToken is null, don't proceed further
         if (!accessToken) {
             throw new Error("Failed to retrieve access token.");
         }
@@ -43,6 +40,20 @@ export const getArtistTracks = async (artistId: string) => {
         return response.data.items;
     } catch (error) {
         console.error(`Error fetching tracks for DXVIL:`, error);
-        return [];  // Return an empty array in case of error
+        return []; 
     }
 };
+
+export const getGumRoadProducts = async () => {
+    try {
+        const response = await axios.get(`https://api.gumroad.com/v2/products`, {
+            headers: {
+                'Authorization': `Bearer ${GUMROAD_SECRET}`
+            }
+        });
+
+        return response.data;
+    } catch (error) {
+        return []; 
+    }
+  }

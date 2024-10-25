@@ -7,8 +7,8 @@ interface songCardProps {
 
 const SongCard: FC<songCardProps> = ({ songData }) => {
   return (
-    <div className="flex gap-4">
-      {[...Array(5)].map((_, index) => {
+    <div className="grid gap-4 grid-cols-7">
+      {[...Array(songData.length)].map((_, index) => {
         const item = songData?.[index];
 
         return (

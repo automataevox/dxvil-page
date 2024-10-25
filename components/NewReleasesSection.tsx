@@ -4,18 +4,24 @@ import NewReleaseCard from "./NewReleaseCard";
 
 export default function NewReleasesSection() {
   const [tracks, setTracks] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true); // Loading state
 
   useEffect(() => {
     const fetchTracks = async () => {
-      const artistId = "1Ngynwc6bFIKGzRcOrBAnx";
-      const tracks = await getArtistTracks(artistId);
-      setTracks(tracks);
+      setIsLoading(true); // Start loading
+      try {
+        const artistId = "1Ngynwc6bFIKGzRcOrBAnx";
+        const fetchedTracks = await getArtistTracks(artistId);
+        setTracks(fetchedTracks);
+      } catch (error) {
+        console.error("Error fetching tracks:", error);
+      } finally {
+        setIsLoading(false); // End loading
+      }
     };
 
     fetchTracks();
   }, []);
-
-  console.log(tracks)
 
   return (
     <div className="flex flex-col gap-3">
@@ -23,7 +29,7 @@ export default function NewReleasesSection() {
         <h2 className="text-2xl">NEW RELEASES</h2>
       </header>
       <main>
-        <NewReleaseCard newReleaseData={tracks} upcomingId="Thoughts Of You"  />
+        <NewReleaseCard newReleaseData={tracks} isLoading={isLoading} />
       </main>
     </div>
   );

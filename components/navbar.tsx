@@ -37,7 +37,7 @@ export const Navbar = () => {
       </NavbarContent>
       
       <NavbarContent justify="center">
-        <Image src={logo} className="w-[2rem] animate-pulse" alt="logo"/>
+        <Image src={logo} className="w-[2rem] animate-pulse" alt="logo" priority={true} />
       </NavbarContent>
 
       <NavbarContent
