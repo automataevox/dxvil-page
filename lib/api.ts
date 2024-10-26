@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const CLIENT_ID = '0e97316ba8d84994a6b0e52a8ad596e9';
-const CLIENT_SECRET = '662736c58591490e8c33b5b5f9adb80c';
-const GUMROAD_SECRET = 'SzMi_UZe5nECIhjWQnm9DD2lgOJMpKy5CvJgAB-wXek'
+const CLIENT_ID = process.env.NEXT_PUBLIC_SPOTIFY_APP_ID;
+const CLIENT_SECRET = process.env.NEXT_PUBLIC_SPOTIFY_APP_SECRET;
+const GUMROAD_SECRET = process.env.NEXT_PUBLIC_GUMROAD_API_TOKEN;
 
 const getAccessToken = async () => {
     try {
@@ -31,7 +31,7 @@ export const getArtistTracks = async (artistId: string) => {
             throw new Error("Failed to retrieve access token.");
         }
 
-        const response = await axios.get(`https://api.spotify.com/v1/artists/1Ngynwc6bFIKGzRcOrBAnx/albums`, {
+        const response = await axios.get(`https://api.spotify.com/v1/artists/1Ngynwc6bFIKGzRcOrBAnx/albums?limit=50`, {
             headers: {
                 'Authorization': `Bearer ${accessToken}`
             }

@@ -12,7 +12,7 @@ export default function DefaultLayout({
     <div className="relative flex flex-col h-screen">
       <GoogleAnalytics gaId="G-0ZZ1FFKEJQ" />
       <Head />
-      <div className="noise w-screen h-screen absolute opacity-20 grayscale" />
+      <div className="noise w-screen h-screen fixed opacity-20 grayscale -z-10" />
       <Navbar />
       <main>
         {children}
