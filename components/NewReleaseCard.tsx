@@ -7,7 +7,7 @@ interface NewReleaseCardProps {
 }
 
 const NewReleaseCard: FC<NewReleaseCardProps> = ({ newReleaseData, isLoading }) => {
-  const releasesToShow = isLoading ? Array(3).fill(null) : newReleaseData.slice(0, 3);
+  const releasesToShow = isLoading ? Array(3)?.fill(null) : (Array.isArray(newReleaseData) ? newReleaseData?.slice(0, 3) : []);
 
   return (
     <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -26,10 +26,10 @@ const NewReleaseCard: FC<NewReleaseCardProps> = ({ newReleaseData, isLoading }) 
                 <Image
                   alt="Album cover"
                   className="object-cover aspect-square"
-                  height={item?.images[0].height / 4}
-                  width={item?.images[0].width / 4}
+                  height={item?.images[0]?.height / 4}
+                  width={item?.images[0]?.width / 4}
                   shadow="md"
-                  src={item?.images[0].url}
+                  src={item?.images[0]?.url}
                 />
               )}
               <div className="flex flex-col justify-between text-foreground-600">
@@ -39,7 +39,7 @@ const NewReleaseCard: FC<NewReleaseCardProps> = ({ newReleaseData, isLoading }) 
                   <>
                     <h5 className="w-font text-xl">{item?.name}</h5>
                     <h5 className="m-font text-xl">
-                      {item?.artists.map((artist: any) => artist.name).join(", ")}
+                      {item?.artists?.map((artist: any) => artist.name)?.join(", ")}
                     </h5>
                   </>
                 )}

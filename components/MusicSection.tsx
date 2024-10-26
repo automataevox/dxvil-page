@@ -7,8 +7,18 @@ export default function MusicSection() {
 
   useEffect(() => {
     const fetchTracks = async () => {
-      const artistId = "your_spotify_artist_id";
-      const tracks = await getArtistTracks(artistId);
+      const tokenResponse = await fetch('/api/getAccessToken');
+      const data = await tokenResponse.json();
+
+      // Check if accessToken is present
+      if (!data.accessToken) {
+          throw new Error('Failed to retrieve access token');
+      }
+
+      const accessToken = data.accessToken;
+      const artistId = "1Ngynwc6bFIKGzRcOrBAnx";
+
+      const tracks  = await getArtistTracks(artistId, accessToken);
       setTracks(tracks); // If an empty array is returned, it will just render nothing
     };
 

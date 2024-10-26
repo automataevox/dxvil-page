@@ -44,7 +44,7 @@ const SongCard: FC<songCardProps> = ({ songData }) => {
                         .join(", ")}
                     </p>
                     <p className="text-default-500">
-                      {item.release_date.slice(0, 4)}
+                      {item?.release_date?.slice(0, 4)}
                     </p>
                   </div>
                 </>
